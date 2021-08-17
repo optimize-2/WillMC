@@ -1,0 +1,6 @@
+name: WillMC
+version: ${project.version}
+author: optimize_2
+
+api-version: 1.14
+main: cn.optimize_2.WillMC.WillMC
