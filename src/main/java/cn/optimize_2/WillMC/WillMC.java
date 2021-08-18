@@ -2,13 +2,25 @@ package cn.optimize_2.WillMC;
 
 import cn.optimize_2.WillMC.utils.PlayerChatListener;
 import cn.optimize_2.WillMC.utils.SocketServer;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public class WillMC extends JavaPlugin {
+    static FileConfiguration configFile;
+
+    public static FileConfiguration getConfigFile() {
+        return configFile;
+    }
+
     @Override
     public void onLoad() {
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+        configFile = getConfig();
         SocketServer.load();
     }
 

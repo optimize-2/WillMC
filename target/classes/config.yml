@@ -1,2 +1,6 @@
-options:
-  auto-update: false
+# You can also use '*' like this:
+# - 192.168.*.*
+ip-whitelist:
+  - 127.0.0.1
+# The socket server will run at localhost:port.
+port: 2333
